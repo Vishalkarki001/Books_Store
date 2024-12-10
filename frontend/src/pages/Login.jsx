@@ -140,9 +140,10 @@ catch(error){
           </button>
           
           <p className='tex-md mt-4 text-center '>Dont have Account ? <NavLink to={'/signup'}><span className='text-blue-700'>Singup</span></NavLink></p>
-          <p className='tex-md mt-4 text-center '>Login With OTP ?<NavLink to={'/user/login/otp'}><span className='text-blue-700'>Click here</span></NavLink></p>
-        </form>
-       
+          <p className='tex-md mt-4 text-center mb-5 '>Login With OTP ?<NavLink to={'/user/login/otp'}><span className='text-blue-700'>Click here</span></NavLink></p>
+        
+    
+       </form>
     </div>
 
    </div>

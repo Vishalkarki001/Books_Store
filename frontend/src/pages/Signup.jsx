@@ -19,7 +19,8 @@ const Signup = () => {
     name:"",
     email:"",
     password:"",
- 
+   number:"",
+   
   });
 
   const navigate=useNavigate(); 
@@ -155,6 +156,20 @@ const Signup = () => {
 
             </div>
             </div>
+            <label htmlFor="number" className="block text-sm font-medium text-gray-700 mb-2 mt-4">
+              Contact Number
+            </label>
+            <input
+              type="number"
+              id="number"
+              name='number'
+              autoComplete='off'
+              placeholder='Enter your Contact number'
+              value={user.number}
+              onChange={handleinput}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+              required
+            />
           </div>
         
 
