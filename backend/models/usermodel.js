@@ -7,32 +7,28 @@ const Userschema=new Schema({
         type:String,
         required:true,
         trim:true,
-        // minlength:[6,"user name is too small"],
-        // maxlength:[20,"user name is too big"]
+     
         
     },
     password:{
         type:String,
         required:true,
         trim:true,
-        // min:[6,"password is to samll"],
-        // maxlength:[12,"password is too big"]
+
     },
     email:{
         type:String,
         unique:true,
         trim:true,
-        // maxlength:[20,"email is too big"],
-        // minlength:[8,"email is too small"]
+  
     },
     number:{
         type:String,
         required: true,
       
-        // minlength: [10,"Number is not valid"],
     },
     token:{
-        Url:String,
+        type:String
     },
     image:{
      type:String,

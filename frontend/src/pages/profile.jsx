@@ -75,7 +75,7 @@ const Profile = () => {
         <div className="flex flex-col items-center mb-4">
           {/* Display image after fetching user data */}
           <img
-            src={user?.image || "/src/images/defaul.jpg"}  // If no image, use a default image
+            src={user?.image || "/src/images/profile.jpg"}  // If no image, use a default image
             alt="Profile"
         
             className="w-28 h-28 rounded-full mb-4 transition-all duration-200"

@@ -15,7 +15,7 @@ app.use(bodyparser.json())
 app.use(cookieParser());  
 
 const corsoptions = {
-    origin: "http://localhost:5174", // Allow requests from this origin
+    origin: "http://localhost:5173", // Allow requests from this origin
     methods: "GET, POST, PUT, PATCH, HEAD, DELETE", // Use methods (plural)
     credentials: true, // Allow credentials (cookies) to be sent
     allowedHeaders: ["Content-Type", "Authorization"], // Optional: specify headers you want to allow
