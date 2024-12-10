@@ -18,7 +18,7 @@ import nodemailer from "nodemailer"
 
 const usercontrol = async (req, res) => {
 
-  const { name, email, password } = req.body;
+  const { name, email, password ,number} = req.body;
 
   //  console.log(req.file)
   //first check the user has no empty field
@@ -44,6 +44,7 @@ const usercontrol = async (req, res) => {
     name,
     email,
     password,
+    number,
 
 
     // avatar:avatar.url,

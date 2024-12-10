@@ -72,7 +72,7 @@ const booksschema=new Schema({
               { upsert: true }     
             ); 
           }
-          console.log("Books inserted successfully (if they didn't already exist).");
+
         } catch (error) {
           console.error("Error inserting books:", error);
         }

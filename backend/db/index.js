@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 
 const connection=async function(){
     const dburl=process.env.dburl
-    const dbname=process.env.dbname
+
     try{
 
    await mongoose.connect(dburl);
