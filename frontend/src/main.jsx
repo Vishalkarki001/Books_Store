@@ -17,6 +17,7 @@ import Profile from './pages/profile.jsx'
 import { OTP } from './pages/Otp.jsx'
 import { OtpLogin } from './pages/OTPLOGIN.jsx'
 import { Logout } from './pages/Logout.jsx'
+import Updateuser from "./pages/Updateuser.jsx"
 
 
 import { createBrowserRouter,RouterProvider,createRoutesFromElements, Route, Routes} from 'react-router-dom'
@@ -40,6 +41,7 @@ const router=createBrowserRouter(
       <Route path="/user/login/otp" element={<OTP/>}/>
       <Route path='/user/login/otp/login' element={<OtpLogin/>}/>
       <Route path='/users/user/account/logout' element={<Logout/>}/>
+      <Route path ="/user/profile/update/user" element={<Updateuser/>}/>
     
 
     

@@ -118,31 +118,21 @@ const Profile = () => {
           Upload
         </button>
       </div>
-
-      {/* Features Section */}
-      <div className="w-full sm:w-3/4 md:w-1/2 grid grid-cols-1 gap-8">
-        {/* Add Books Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <NavLink to="/user/admin" className="text-indigo-600 font-semibold text-lg hover:underline">
-            Add Books
+      <div className= " w-1/2 sm:w-1/2 md:w-1/2 mb-4  bg-orange-400  p-6 rounded-lg shadow-md">
+          <NavLink to="/user/profile/update/user" className="text-white font-semibold text-lg hover:underline">
+            Update User
           </NavLink>
         </div>
 
-        {/* Make Notes Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <NavLink to="/make-notes" className="text-indigo-600 font-semibold text-lg hover:underline">
-            Make Notes
-          </NavLink>
-        </div>
-
+   
         {/* Other Features Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <NavLink to="/other-feature" className="text-indigo-600 font-semibold text-lg hover:underline">
-            Other Feature
+        <div className= " w-full sm:w-3/4 md:w-1/2 bg-white p-6 rounded-lg shadow-md">
+          <NavLink to="/user/admin" className="text-indigo-600 font-semibold text-lg hover:underline">
+            Add books
           </NavLink>
         </div>
       </div>
-    </div>
+    
   );
 };
 
