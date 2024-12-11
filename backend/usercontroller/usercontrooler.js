@@ -152,5 +152,71 @@ try {
 
   
 }}
+            //User update
 
-export { usercontrol, userotpsend,checkuserotp}
+            const updateuser = async (req, res) => {
+              const userid = req.rootuser._id;
+              const { name, email, password, number } = req.body;
+            
+              try {
+                // Update the name if provided
+                if (name && name.trim()) {
+                  const existingName = await usermodel.findOne({ name });
+                  if (existingName) {
+                    return res.status(400).json({ message: "This username is already registered" });
+                  }
+            
+                  const updatedUser = await usermodel.findByIdAndUpdate(
+                    userid,
+                    { name },
+                    { new: true }
+                  );
+            
+                  if (!updatedUser) {
+                    return res.status(404).json({ message: "User not found or name not updated" });
+                  }
+            
+                  // Return success for name update
+                  return res.status(200).json({
+                    message: "User name was updated successfully",
+                    updatedUser,
+                  });
+                }
+            
+                // Update the email if provided
+                if (email && email.trim()) {
+                  const existingEmail = await usermodel.findOne({ email });
+                  if (existingEmail) {
+                    return res.status(400).json({ message: "This email is already registered" });
+                  }
+            
+                  const updatedEmail = await usermodel.findByIdAndUpdate(
+                    userid,
+                    { email },
+                    { new: true }
+                  );
+            
+                  if (!updatedEmail) {
+                    return res.status(404).json({ message: "User not found or email not updated" });
+                  }
+            
+                  // Return success for email update
+                  return res.status(200).json({
+                    message: "User email was updated successfully",
+                    updatedEmail,
+                  });
+                }
+            
+                // If neither name nor email is provided
+                return res.status(400).json({ message: "No valid fields provided for update" });
+              } catch (err) {
+                console.error(err);
+                return res.status(500).json({ message: "An error occurred", error: err.message });
+              }
+            };
+            
+
+
+
+
+export { usercontrol, userotpsend,checkuserotp,updateuser}

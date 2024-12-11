@@ -1,7 +1,7 @@
 import Router from "express"
 const router=Router()
 import { islogin } from "../middleware/islogin.js";
-import { checkuserotp, usercontrol} from "../usercontroller/usercontrooler.js"
+import { checkuserotp, updateuser, usercontrol} from "../usercontroller/usercontrooler.js"
 import { logincontroller } from "../usercontroller/logincontroller.js";
 
 import { contactcontrooler } from "../usercontroller/contact.js";
@@ -39,6 +39,7 @@ router.get("/user/login/otp",userotpsend)
 router.post("/user/login/otp/login",checkuserotp)
 router.get("/user/login/otp/login",checkuserotp)
 router.get("/user/account/logout",logoutcontroller)
+router.post("/user/update/profile",islogin,updateuser)
 
 
 
